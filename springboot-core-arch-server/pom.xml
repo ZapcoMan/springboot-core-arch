@@ -27,6 +27,8 @@
         <pagehelper.version>1.4.6</pagehelper.version>
         <lombok.version>1.18.32</lombok.version>
         <springdoc.version>2.1.0</springdoc.version>
+        <springdoc-openapi-starter-webmvc-api>2.1.0</springdoc-openapi-starter-webmvc-api>
+        <lombok>1.18.32</lombok>
     </properties>
 
     <dependencyManagement>
@@ -39,6 +41,8 @@
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
+
+
         </dependencies>
     </dependencyManagement>
 
