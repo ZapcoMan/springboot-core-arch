@@ -8,7 +8,6 @@
         <artifactId>springboot-core-arch-server</artifactId>
         <version>1.0-SNAPSHOT</version>
     </parent>
-
     <artifactId>common-core</artifactId>
 
     <properties>
