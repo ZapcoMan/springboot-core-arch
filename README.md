@@ -4,88 +4,110 @@
 ## 项目结构
 ~~~
 springboot-core-arch/
-├── .git/                           # Git版本控制目录
-├── .idea/                          # IntelliJ IDEA配置目录
-├── springboot-core-arch-server/    # 服务端主目录
-│   ├── .mvn/                       # Maven包装器配置
-│   ├── common-core/                # 核心通用模块
-│   │   ├── src/
-│   │   │   ├── main/
-│   │   │   │   ├── java/org/example/common/
-│   │   │   │   │   ├── advice/     # 统一响应处理等切面
-│   │   │   │   │   ├── annotation/ # 自定义注解
-│   │   │   │   │   ├── config/     # 配置类
-│   │   │   │   │   ├── dto/        # 数据传输对象
-│   │   │   │   │   ├── exception/  # 异常处理相关
-│   │   │   │   │   └── utils/      # 工具类
-│   │   │   │   └── resources/      # 资源文件
-│   │   │   └── test/               # 测试代码
-│   │   └── pom.xml                 # 模块Maven配置
-│   │
-│   ├── common-dto/                 # 数据传输对象模块
-│   │   ├── src/
-│   │   │   ├── main/
-│   │   │   │   ├── java/           # DTO类定义
-│   │   │   │   └── resources/
-│   │   │   └── test/
-│   │   └── pom.xml
-│   │
-│   ├── common-exception/           # 统一异常处理模块
-│   │   ├── src/
-│   │   │   ├── main/
-│   │   │   │   ├── java/           # 异常定义和处理
-│   │   │   │   └── resources/
-│   │   │   └── test/
-│   │   └── pom.xml
-│   │
-│   ├── common-log/                 # 日志处理模块
-│   │   ├── src/
-│   │   │   ├── main/
-│   │   │   │   ├── java/           # 日志相关功能
-│   │   │   │   └── resources/
-│   │   │   └── test/
-│   │   └── pom.xml
-│   │
-│   ├── common-response/            # 响应处理模块
-│   │   ├── src/
-│   │   │   ├── main/
-│   │   │   │   ├── java/           # 统一响应格式定义
-│   │   │   │   └── resources/
-│   │   │   └── test/
-│   │   └── pom.xml
-│   │
-│   ├── common-security/            # 安全模块
-│   │   ├── src/
-│   │   │   ├── main/
-│   │   │   │   ├── java/           # 安全相关功能
-│   │   │   │   └── resources/
-│   │   │   └── test/
-│   │   └── pom.xml
-│   │
-│   ├── service-auth/               # 认证服务模块
-│   │   ├── .mvn/                   # Maven包装器
-│   │   ├── src/
-│   │   │   ├── main/
-│   │   │   │   ├── java/           # 认证服务业务逻辑
-│   │   │   │   └── resources/      # 配置文件
-│   │   │   └── test/
-│   │   ├── pom.xml
-│   │   └── Dockerfile              # Docker部署文件
-│   │
-│   ├── service-user/               # 用户服务模块
-│   │   ├── .mvn/                   # Maven包装器
-│   │   ├── src/
-│   │   │   ├── main/
-│   │   │   │   ├── java/           # 用户服务业务逻辑
-│   │   │   │   └── resources/      # 配置文件
-│   │   │   └── test/
-│   │   ├── pom.xml
-│   │   └── Dockerfile              # Docker部署文件
-│   │
-│   └── pom.xml                     # 父级Maven配置
-├── .gitignore                      # Git忽略文件配置
-├── LICENSE                         # 许可证文件
-└── README.md                       # 项目说明文档
+├── .git/
+├── .gitignore
+├── .idea/
+├── LICENSE
+├── README.md
+└── springboot-core-arch-server/
+    ├── .mvn/
+    ├── common-core/
+    │   ├── pom.xml
+    │   └── src/
+    │       ├── main/
+    │       │   ├── java/
+    │       │   │   └── org/
+    │       │   │       └── example/
+    │       │   │           └── common/
+    │       │   │               ├── advice/
+    │       │   │               │   └── GlobalResponseAdvice.java
+    │       │   │               ├── annotation/
+    │       │   │               │   ├── AuditLogRecord.java
+    │       │   │               │   ├── DataScope.java
+    │       │   │               │   └── RequiresPermission.java
+    │       │   │               ├── config/
+    │       │   │               │   ├── CorsConfig.java
+    │       │   │               │   ├── JacksonConfig.java
+    │       │   │               │   ├── JwtProperties.java
+    │       │   │               │   ├── MyBatisConfig.java
+    │       │   │               │   ├── RedisConfig.java
+    │       │   │               │   └── SecurityConfig.java
+    │       │   │               ├── dto/
+    │       │   │               │   └── PageRequestDTO.java
+    │       │   │               ├── exception/
+    │       │   │               │   ├── CustomerException.java
+    │       │   │               │   └── GlobalExceptionHandler.java
+    │       │   │               └── utils/
+    │       │   │                   ├── JwtUtil.java
+    │       │   │                   ├── MixUtils.java
+    │       │   │                   ├── RedisUtil.java
+    │       │   │                   └── TokenUtils.java
+    │       │   └── resources/
+    │       └── test/
+    ├── common-dto/
+    │   ├── pom.xml
+    │   └── src/
+    │       ├── main/
+    │       └── test/
+    ├── common-exception/
+    │   ├── pom.xml
+    │   └── src/
+    │       ├── main/
+    │       └── test/
+    ├── common-log/
+    │   ├── pom.xml
+    │   └── src/
+    │       ├── main/
+    │       └── test/
+    ├── common-response/
+    │   ├── pom.xml
+    │   └── src/
+    │       ├── main/
+    │       │   ├── java/
+    │       │   │   └── org/
+    │       │   │       └── example/
+    │       │   │           └── result/
+    │       │   │               ├── PageResult.java
+    │       │   │               ├── R.java
+    │       │   │               └── ResultCodeEnum.java
+    │       │   └── resources/
+    │       └── test/
+    ├── common-security/
+    │   ├── pom.xml
+    │   └── src/
+    │       ├── main/
+    │       └── test/
+    ├── service-auth/
+    │   ├── .mvn/
+    │   ├── pom.xml
+    │   └── src/
+    │       ├── main/
+    │       │   ├── java/
+    │       │   │   └── org/
+    │       │   │       └── example/
+    │       │   │           └── serviceauth/
+    │       │   │               └── ServiceAuthApplication.java
+    │       │   └── resources/
+    │       │       └── application.properties
+    │       └── test/
+    │           └── java/
+    ├── service-user/
+    │   ├── .mvn/
+    │   ├── pom.xml
+    │   └── src/
+    │       ├── main/
+    │       │   ├── java/
+    │       │   │   └── org/
+    │       │   │       └── example/
+    │       │   │           └── serviceuser/
+    │       │   │               ├── ServiceUserApplication.java
+    │       │   │               └── mapper/
+    │       │   └── resources/
+    │       │       └── application.properties
+    │       └── test/
+    │           └── java/
+    └── pom.xml
+
 
 ~~~
 
