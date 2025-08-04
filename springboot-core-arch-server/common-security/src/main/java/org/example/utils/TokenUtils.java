@@ -1,4 +1,4 @@
-package org.example.common.utils;
+package org.example.utils;
 
 import cn.hutool.core.date.DateUtil;
 import cn.hutool.core.util.StrUtil;
