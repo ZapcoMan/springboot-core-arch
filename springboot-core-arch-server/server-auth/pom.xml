@@ -15,7 +15,7 @@
 
     <!-- 当前模块信息 -->
     <artifactId>server-auth</artifactId>
-    <name>service-auth</name>
+    <name>server-auth</name>
     <description>Spring Boot 模块：用户认证服务</description>
 
     <dependencies>
