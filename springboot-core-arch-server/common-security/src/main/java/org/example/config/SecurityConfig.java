@@ -1,7 +1,8 @@
-package org.example.common.config;
+package org.example.config;
 
-import com.example.security.JwtAuthenticationFilter;
+
 import jakarta.annotation.Resource;
+import org.example.security.JwtAuthenticationFilter;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.method.configuration.EnableMethodSecurity;
