@@ -4,151 +4,98 @@
 ## 项目结构
 ~~~
 springboot-core-arch/
-├── .git/
-├── .gitignore
-├── .idea/
-├── LICENSE
+├── springboot-core-arch-server/
+│   ├── common-cache/
+│   │   ├── src/main/java/org/example/
+│   │   │   ├── config/
+│   │   │   │   ├── CorsConfig.java
+│   │   │   │   ├── JacksonConfig.java
+│   │   │   │   └── RedisConfig.java
+│   │   │   └── utils/
+│   │   │       ├── MixUtils.java
+│   │   │       └── RedisUtil.java
+│   │   └── pom.xml
+│   ├── common-core/
+│   │   ├── src/main/java/org/example/
+│   │   │   ├── common/
+│   │   │   │   ├── advice/
+│   │   │   │   ├── annotation/
+│   │   │   │   ├── dto/
+│   │   │   │   └── enums/
+│   │   │   └── core/
+│   │   │       ├── controller/
+│   │   │       ├── mapper/
+│   │   │       └── service/
+│   │   └── pom.xml
+│   ├── common-db/
+│   │   ├── src/main/java/org/example/
+│   │   │   └── config/
+│   │   │       └── MyBatisConfig.java
+│   │   └── pom.xml
+│   ├── common-dto/
+│   │   └── pom.xml
+│   ├── common-entity/
+│   │   ├── src/main/java/org/example/
+│   │   │   └── entity/
+│   │   │       ├── Account.java
+│   │   │       ├── Admin.java
+│   │   │       └── AuditLog.java
+│   │   └── pom.xml
+│   ├── common-exception/
+│   │   ├── src/main/java/org/example/
+│   │   │   └── exception/
+│   │   │       ├── CustomerException.java
+│   │   │       └── GlobalExceptionHandler.java
+│   │   └── pom.xml
+│   ├── common-log/
+│   │   ├── src/main/java/org/example/
+│   │   │   └── log/
+│   │   │       ├── aspect/
+│   │   │       ├── mapper/
+│   │   │       └── service/
+│   │   └── pom.xml
+│   ├── common-response/
+│   │   ├── src/main/java/org/example/
+│   │   │   └── result/
+│   │   │       ├── PageResult.java
+│   │   │       ├── R.java
+│   │   │       └── ResultCodeEnum.java
+│   │   └── pom.xml
+│   ├── common-security/
+│   │   ├── src/main/java/org/example/
+│   │   │   ├── config/
+│   │   │   │   ├── JwtProperties.java
+│   │   │   │   └── SecurityConfig.java
+│   │   │   ├── security/
+│   │   │   │   ├── AccountService.java
+│   │   │   │   ├── JwtAuthenticationFilter.java
+│   │   │   │   └── RoleStrategyContext.java
+│   │   │   ├── strategy/
+│   │   │   │   ├── Context/
+│   │   │   │   ├── RoleStrategy.java
+│   │   │   │   └── impl/
+│   │   │   └── utils/
+│   │   │       ├── JwtUtil.java
+│   │   │       └── TokenUtils.java
+│   │   └── pom.xml
+│   ├── server-auth/
+│   │   ├── src/main/java/org/example/serviceauth/
+│   │   │   └── ServiceAuthApplication.java
+│   │   ├── src/main/resources/
+│   │   │   └── application.yml
+│   │   └── pom.xml
+│   ├── server-user/
+│   │   ├── src/main/java/org/example/serviceuser/
+│   │   │   ├── ServiceUserApplication.java
+│   │   │   ├── mapper/
+│   │   │   └── service/
+│   │   ├── src/main/resources/
+│   │   │   └── application.yml
+│   │   └── pom.xml
+│   └── pom.xml
 ├── README.md
-└── springboot-core-arch-server/
-    ├── .mvn/
-    ├── pom.xml
-    ├── common-core/
-    │   ├── pom.xml
-    │   └── src/
-    │       ├── main/
-    │       │   ├── java/
-    │       │   │   └── org/example/
-    │       │   │       ├── common/
-    │       │   │       │   ├── advice/
-    │       │   │       │   │   └── GlobalResponseAdvice.java
-    │       │   │       │   ├── annotation/
-    │       │   │       │   │   ├── AuditLogRecord.java
-    │       │   │       │   │   ├── DataScope.java
-    │       │   │       │   │   └── RequiresPermission.java
-    │       │   │       │   ├── config/
-    │       │   │       │   │   ├── CorsConfig.java
-    │       │   │       │   │   ├── JacksonConfig.java
-    │       │   │       │   │   ├── JwtProperties.java
-    │       │   │       │   │   ├── MyBatisConfig.java
-    │       │   │       │   │   ├── RedisConfig.java
-    │       │   │       │   │   └── SecurityConfig.java
-    │       │   │       │   ├── dto/
-    │       │   │       │   │   └── PageRequestDTO.java
-    │       │   │       │   ├── enums/
-    │       │   │       │   │   └── RoleEnum.java
-    │       │   │       │   └── utils/
-    │       │   │       │       ├── JwtUtil.java
-    │       │   │       │       ├── MixUtils.java
-    │       │   │       │       ├── RedisUtil.java
-    │       │   │       │       └── TokenUtils.java
-    │       │   │       └── core/
-    │       │   │           ├── controller/
-    │       │   │           │   └── BaseController.java
-    │       │   │           ├── mapper/
-    │       │   │           │   └── BaseMapper.java
-    │       │   │           └── service/
-    │       │   │               ├── BaseService.java
-    │       │   │               └── impl/
-    │       │   │                   └── BaseServiceImpl.java
-    │       │   └── resources/
-    │       └── test/
-    ├── common-dto/
-    │   ├── pom.xml
-    │   └── src/
-    │       ├── main/
-    │       │   └── java/
-    │       │       └── org/example/
-    │       └── test/
-    ├── common-entity/
-    │   ├── pom.xml
-    │   └── src/
-    │       ├── main/
-    │       │   └── java/
-    │       │       └── org/example/entity/
-    │       │           ├── Account.java
-    │       │           ├── Admin.java
-    │       │           └── AuditLog.java
-    │       └── test/
-    ├── common-exception/
-    │   ├── pom.xml
-    │   └── src/
-    │       ├── main/
-    │       │   └── java/
-    │       │       └── org/example/exception/
-    │       │           ├── CustomerException.java
-    │       │           └── GlobalExceptionHandler.java
-    │       └── test/
-    ├── common-log/
-    │   ├── pom.xml
-    │   └── src/
-    │       ├── main/
-    │       │   └── java/
-    │       │       └── org/example/log/
-    │       │           ├── aspect/
-    │       │           │   └── AuditLogAspect.java
-    │       │           ├── mapper/
-    │       │           │   └── AuditLogMapper.java
-    │       │           └── service/
-    │       │               ├── AuditLogService.java
-    │       │               └── impl/
-    │       │                   └── AuditLogServiceImpl.java
-    │       └── test/
-    ├── common-response/
-    │   ├── pom.xml
-    │   └── src/
-    │       ├── main/
-    │       │   └── java/
-    │       │       └── org/example/result/
-    │       │           ├── PageResult.java
-    │       │           ├── R.java
-    │       │           └── ResultCodeEnum.java
-    │       └── test/
-    ├── common-security/
-    │   ├── pom.xml
-    │   └── src/
-    │       ├── main/
-    │       │   └── java/
-    │       │       └── org/example/
-    │       │           ├── security/
-    │       │           │   ├── AccountService.java
-    │       │           │   ├── JwtAuthenticationFilter.java
-    │       │           │   └── RoleStrategyContext.java
-    │       │           └── strategy/
-    │       │               ├── Context/
-    │       │               │   └── RoleStrategyContext.java
-    │       │               ├── RoleStrategy.java
-    │       │               └── impl/
-    │       │                   ├── AdminStrategy.java
-    │       │                   ├── TeacherStrategy.java
-    │       │                   └── UserStrategy.java
-    │       └── test/
-    ├── server-auth/
-    │   ├── .mvn/
-    │   ├── pom.xml
-    │   └── src/
-    │       ├── main/
-    │       │   ├── java/
-    │       │   │   └── org/example/serviceauth/
-    │       │   │       └── ServiceAuthApplication.java
-    │       │   └── resources/
-    │       │       └── application.yml
-    │       └── test/
-    └── server-user/
-        ├── .mvn/
-        ├── pom.xml
-        └── src/
-            ├── main/
-            │   ├── java/
-            │   │   └── org/example/serviceuser/
-            │   │       ├── ServiceUserApplication.java
-            │   │       ├── mapper/
-            │   │       └── service/
-            │   │           └── account/
-            │   │               └── impl/
-            │   │                   └── AdminAccountServiceImpl.java
-            │   └── resources/
-            │       └── application.yml
-            └── test/
+├── LICENSE
+└── .gitignore
 
 ~~~
 
