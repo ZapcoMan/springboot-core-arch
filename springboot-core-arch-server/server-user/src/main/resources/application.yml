@@ -1,3 +1,25 @@
+server:
+    port: 8089
 spring:
     application:
         name: service-user
+    datasource:
+        url: jdbc:mysql://localhost:3306/core_arch?useSSL=false&characterEncoding=utf8&serverTimezone=Asia/Shanghai
+        username: root
+        password: admin  # 使用环境变量或默认值
+        driver-class-name: com.mysql.cj.jdbc.Driver
+        hikari:  # 添加连接池配置
+            minimum-idle: 5
+            maximum-pool-size: 20
+            idle-timeout: 300000
+            max-lifetime: 600000
+            connection-timeout: 30000
+
+    # MyBatis配置
+    mybatis:
+        mapper-locations: classpath*:/mapper/**/*.xml
+        type-aliases-package: com.example.entity
+        configuration:
+            map-underscore-to-camel-case: true
+            cache-enabled: true  # 启用缓存
+            lazy-loading-enabled: true  # 启用延迟加载
