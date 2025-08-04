@@ -77,7 +77,7 @@ springboot-core-arch/
     │   └── src/
     │       ├── main/
     │       └── test/
-    ├── service-auth/
+    ├── server-auth/
     │   ├── .mvn/
     │   ├── pom.xml
     │   └── src/
@@ -91,7 +91,7 @@ springboot-core-arch/
     │       │       └── application.properties
     │       └── test/
     │           └── java/
-    ├── service-user/
+    ├── server-user/
     │   ├── .mvn/
     │   ├── pom.xml
     │   └── src/

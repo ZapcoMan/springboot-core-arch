@@ -13,7 +13,7 @@
         <relativePath>../pom.xml</relativePath>
     </parent>
 
-    <artifactId>service-user</artifactId>
+    <artifactId>server-user</artifactId>
     <name>service-user</name>
 
     <dependencies>
