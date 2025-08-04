@@ -1,4 +1,4 @@
-package org.example.common.utils;
+package org.example.utils;
 
 import cn.hutool.core.codec.Base32;
 import cn.hutool.core.codec.Base64;
