@@ -8,10 +8,17 @@ import org.springframework.web.filter.CorsFilter;
 
 /**
  * 跨域配置
+ * 该类用于配置跨域资源共享(CORS)策略，允许浏览器向不同域的服务器发起请求
  */
 @Configuration
 public class CorsConfig {
 
+    /**
+     * 创建并配置跨域过滤器
+     * 该方法定义了允许跨域访问的规则，包括来源、请求头和请求方法
+     *
+     * @return CorsFilter 跨域过滤器实例
+     */
     @Bean
     public CorsFilter corsFilter() {
         UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
