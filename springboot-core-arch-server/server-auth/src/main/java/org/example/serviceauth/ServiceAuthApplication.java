@@ -1,9 +1,11 @@
 package org.example.serviceauth;
 
+import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
+@MapperScan("org.example.serviceauth.mapper")
 public class ServiceAuthApplication {
 
     public static void main(String[] args) {
