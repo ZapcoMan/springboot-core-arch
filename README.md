@@ -11,71 +11,116 @@ springboot-core-arch/
 ├── README.md
 └── springboot-core-arch-server/
     ├── .mvn/
+    ├── pom.xml
     ├── common-core/
     │   ├── pom.xml
     │   └── src/
     │       ├── main/
     │       │   ├── java/
-    │       │   │   └── org/
-    │       │   │       └── example/
-    │       │   │           └── common/
-    │       │   │               ├── advice/
-    │       │   │               │   └── GlobalResponseAdvice.java
-    │       │   │               ├── annotation/
-    │       │   │               │   ├── AuditLogRecord.java
-    │       │   │               │   ├── DataScope.java
-    │       │   │               │   └── RequiresPermission.java
-    │       │   │               ├── config/
-    │       │   │               │   ├── CorsConfig.java
-    │       │   │               │   ├── JacksonConfig.java
-    │       │   │               │   ├── JwtProperties.java
-    │       │   │               │   ├── MyBatisConfig.java
-    │       │   │               │   ├── RedisConfig.java
-    │       │   │               │   └── SecurityConfig.java
-    │       │   │               ├── dto/
-    │       │   │               │   └── PageRequestDTO.java
-    │       │   │               ├── exception/
-    │       │   │               │   ├── CustomerException.java
-    │       │   │               │   └── GlobalExceptionHandler.java
-    │       │   │               └── utils/
-    │       │   │                   ├── JwtUtil.java
-    │       │   │                   ├── MixUtils.java
-    │       │   │                   ├── RedisUtil.java
-    │       │   │                   └── TokenUtils.java
+    │       │   │   └── org/example/
+    │       │   │       ├── common/
+    │       │   │       │   ├── advice/
+    │       │   │       │   │   └── GlobalResponseAdvice.java
+    │       │   │       │   ├── annotation/
+    │       │   │       │   │   ├── AuditLogRecord.java
+    │       │   │       │   │   ├── DataScope.java
+    │       │   │       │   │   └── RequiresPermission.java
+    │       │   │       │   ├── config/
+    │       │   │       │   │   ├── CorsConfig.java
+    │       │   │       │   │   ├── JacksonConfig.java
+    │       │   │       │   │   ├── JwtProperties.java
+    │       │   │       │   │   ├── MyBatisConfig.java
+    │       │   │       │   │   ├── RedisConfig.java
+    │       │   │       │   │   └── SecurityConfig.java
+    │       │   │       │   ├── dto/
+    │       │   │       │   │   └── PageRequestDTO.java
+    │       │   │       │   ├── enums/
+    │       │   │       │   │   └── RoleEnum.java
+    │       │   │       │   └── utils/
+    │       │   │       │       ├── JwtUtil.java
+    │       │   │       │       ├── MixUtils.java
+    │       │   │       │       ├── RedisUtil.java
+    │       │   │       │       └── TokenUtils.java
+    │       │   │       └── core/
+    │       │   │           ├── controller/
+    │       │   │           │   └── BaseController.java
+    │       │   │           ├── mapper/
+    │       │   │           │   └── BaseMapper.java
+    │       │   │           └── service/
+    │       │   │               ├── BaseService.java
+    │       │   │               └── impl/
+    │       │   │                   └── BaseServiceImpl.java
     │       │   └── resources/
     │       └── test/
     ├── common-dto/
     │   ├── pom.xml
     │   └── src/
     │       ├── main/
+    │       │   └── java/
+    │       │       └── org/example/
+    │       └── test/
+    ├── common-entity/
+    │   ├── pom.xml
+    │   └── src/
+    │       ├── main/
+    │       │   └── java/
+    │       │       └── org/example/entity/
+    │       │           ├── Account.java
+    │       │           ├── Admin.java
+    │       │           └── AuditLog.java
     │       └── test/
     ├── common-exception/
     │   ├── pom.xml
     │   └── src/
     │       ├── main/
+    │       │   └── java/
+    │       │       └── org/example/exception/
+    │       │           ├── CustomerException.java
+    │       │           └── GlobalExceptionHandler.java
     │       └── test/
     ├── common-log/
     │   ├── pom.xml
     │   └── src/
     │       ├── main/
+    │       │   └── java/
+    │       │       └── org/example/log/
+    │       │           ├── aspect/
+    │       │           │   └── AuditLogAspect.java
+    │       │           ├── mapper/
+    │       │           │   └── AuditLogMapper.java
+    │       │           └── service/
+    │       │               ├── AuditLogService.java
+    │       │               └── impl/
+    │       │                   └── AuditLogServiceImpl.java
     │       └── test/
     ├── common-response/
     │   ├── pom.xml
     │   └── src/
     │       ├── main/
-    │       │   ├── java/
-    │       │   │   └── org/
-    │       │   │       └── example/
-    │       │   │           └── result/
-    │       │   │               ├── PageResult.java
-    │       │   │               ├── R.java
-    │       │   │               └── ResultCodeEnum.java
-    │       │   └── resources/
+    │       │   └── java/
+    │       │       └── org/example/result/
+    │       │           ├── PageResult.java
+    │       │           ├── R.java
+    │       │           └── ResultCodeEnum.java
     │       └── test/
     ├── common-security/
     │   ├── pom.xml
     │   └── src/
     │       ├── main/
+    │       │   └── java/
+    │       │       └── org/example/
+    │       │           ├── security/
+    │       │           │   ├── AccountService.java
+    │       │           │   ├── JwtAuthenticationFilter.java
+    │       │           │   └── RoleStrategyContext.java
+    │       │           └── strategy/
+    │       │               ├── Context/
+    │       │               │   └── RoleStrategyContext.java
+    │       │               ├── RoleStrategy.java
+    │       │               └── impl/
+    │       │                   ├── AdminStrategy.java
+    │       │                   ├── TeacherStrategy.java
+    │       │                   └── UserStrategy.java
     │       └── test/
     ├── server-auth/
     │   ├── .mvn/
@@ -83,33 +128,30 @@ springboot-core-arch/
     │   └── src/
     │       ├── main/
     │       │   ├── java/
-    │       │   │   └── org/
-    │       │   │       └── example/
-    │       │   │           └── serviceauth/
-    │       │   │               └── ServiceAuthApplication.java
+    │       │   │   └── org/example/serviceauth/
+    │       │   │       └── ServiceAuthApplication.java
     │       │   └── resources/
-    │       │       └── application.properties
+    │       │       └── application.yml
     │       └── test/
-    │           └── java/
-    ├── server-user/
-    │   ├── .mvn/
-    │   ├── pom.xml
-    │   └── src/
-    │       ├── main/
-    │       │   ├── java/
-    │       │   │   └── org/
-    │       │   │       └── example/
-    │       │   │           └── serviceuser/
-    │       │   │               ├── ServiceUserApplication.java
-    │       │   │               └── mapper/
-    │       │   └── resources/
-    │       │       └── application.properties
-    │       └── test/
-    │           └── java/
-    └── pom.xml
-
+    └── server-user/
+        ├── .mvn/
+        ├── pom.xml
+        └── src/
+            ├── main/
+            │   ├── java/
+            │   │   └── org/example/serviceuser/
+            │   │       ├── ServiceUserApplication.java
+            │   │       ├── mapper/
+            │   │       └── service/
+            │   │           └── account/
+            │   │               └── impl/
+            │   │                   └── AdminAccountServiceImpl.java
+            │   └── resources/
+            │       └── application.yml
+            └── test/
 
 ~~~
+
 
 ## 许可证
 
