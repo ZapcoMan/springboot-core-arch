@@ -15,6 +15,7 @@
         <module>common-response</module>
         <module>common-dto</module>
         <module>common-log</module>
+        <module>common-entity</module>
     </modules>
 
     <properties>
