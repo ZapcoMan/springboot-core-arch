@@ -1,4 +1,4 @@
-package org.example.common.utils;
+package org.example.utils;
 
 import jakarta.annotation.Resource;
 import org.springframework.data.redis.core.StringRedisTemplate;
