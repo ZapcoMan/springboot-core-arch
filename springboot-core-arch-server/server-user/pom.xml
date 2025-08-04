@@ -14,7 +14,7 @@
     </parent>
 
     <artifactId>server-user</artifactId>
-    <name>service-user</name>
+    <name>server-user</name>
 
     <dependencies>
         <dependency>
