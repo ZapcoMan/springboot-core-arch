@@ -1,4 +1,4 @@
-package org.example.common.utils;
+package org.example.utils;
 
 import com.auth0.jwt.JWT;
 import com.auth0.jwt.algorithms.Algorithm;
