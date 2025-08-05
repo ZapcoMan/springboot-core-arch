@@ -1,12 +1,13 @@
-package org.example.strategy.impl;
+package org.example.serviceauth.strategy;
 
-import com.example.common.utils.JwtUtil;
-import com.example.enums.RoleEnum;
-import com.example.modules.system.dto.LoginResult;
-import com.example.modules.system.entity.Account;
-import com.example.modules.system.service.AdminService;
-import com.example.strategy.RoleStrategy;
+
 import lombok.extern.slf4j.Slf4j;
+import org.example.LoginResult;
+import org.example.common.enums.RoleEnum;
+import org.example.entity.Account;
+import org.example.serviceauth.service.AdminService;
+import org.example.strategy.RoleStrategy;
+import org.example.utils.JwtUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
