@@ -1,8 +1,8 @@
 package org.example.strategy;
 
 
-import com.example.modules.system.dto.LoginResult;
-import com.example.modules.system.entity.Account;
+import org.example.LoginResult;
+import org.example.entity.Account;
 
 public interface RoleStrategy {
 
