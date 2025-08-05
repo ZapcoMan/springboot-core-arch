@@ -8,7 +8,7 @@ import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.Around;
 import org.aspectj.lang.annotation.Aspect;
 import org.example.common.annotation.AuditLogRecord;
-import org.example.entity.AuditLog;
+import org.example.log.entity.AuditLog;
 import org.example.log.service.AuditLogService;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Component;
