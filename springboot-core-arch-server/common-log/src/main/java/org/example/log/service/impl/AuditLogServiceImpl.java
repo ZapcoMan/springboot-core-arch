@@ -3,7 +3,7 @@ package org.example.log.service.impl;
 
 import jakarta.annotation.Resource;
 import org.example.core.service.impl.BaseServiceImpl;
-import org.example.entity.AuditLog;
+import org.example.log.entity.AuditLog;
 import org.example.log.mapper.AuditLogMapper;
 import org.example.log.service.AuditLogService;
 import org.springframework.stereotype.Service;
