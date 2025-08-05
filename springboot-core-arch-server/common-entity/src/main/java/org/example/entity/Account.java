@@ -1,6 +1,10 @@
 package org.example.entity;
 
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
 /**
  * Account类代表系统中的用户账户信息
  * 它封装了用户相关的各种属性，如用户名、密码、角色等
