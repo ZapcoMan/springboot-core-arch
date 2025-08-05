@@ -18,7 +18,8 @@
         <module>common-entity</module>
         <module>common-cache</module>
         <module>common-db</module>
-        <module>common-db</module>
+        <module>server-auth</module>
+        <module>server-user</module>
     </modules>
 
     <properties>
