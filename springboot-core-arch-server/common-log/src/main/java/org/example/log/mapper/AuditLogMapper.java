@@ -3,7 +3,7 @@ package org.example.log.mapper;
 
 import org.apache.ibatis.annotations.*;
 import org.example.core.mapper.BaseMapper;
-import org.example.entity.AuditLog;
+import org.example.log.entity.AuditLog;
 
 import java.util.List;
 
