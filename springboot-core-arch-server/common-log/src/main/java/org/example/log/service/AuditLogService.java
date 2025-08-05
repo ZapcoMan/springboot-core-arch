@@ -3,7 +3,7 @@ package org.example.log.service;
 
 
 import org.example.core.service.BaseService;
-import org.example.entity.AuditLog;
+import org.example.log.entity.AuditLog;
 
 import java.util.List;
 
