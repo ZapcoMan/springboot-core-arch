@@ -4,6 +4,10 @@
 ## 项目结构
 ~~~
 springboot-core-arch/
+.github/
+└── workflows/
+    └── deploy.yml
+
 ├── README.md
 ├── LICENSE
 ├── .gitignore
@@ -164,7 +168,28 @@ springboot-core-arch/
 
 
 ~~~
-
+~~~
+  springboot-core-arch  ls                                                                                                                                                                                                                                                                                          
+╭───┬─────────────────────────────┬──────┬─────────┬────────────────╮
+│ # │            name             │ type │  size   │    modified    │                                                                                                                                                                                                                                                 
+├───┼─────────────────────────────┼──────┼─────────┼────────────────┤
+│ 0 │ .github                     │ dir  │     0 B │ 3 minutes ago  │                                                                                                                                                                                                                                                 
+│ 1 │ .gitignore                  │ file │   774 B │ 3 weeks ago    │                                                                                                                                                                                                                                                 
+│ 2 │ .idea                       │ dir  │  4.0 kB │ 2 minutes ago  │                                                                                                                                                                                                                                                 
+│ 3 │ LICENSE                     │ file │ 27.0 kB │ 3 weeks ago    │                                                                                                                                                                                                                                                 
+│ 4 │ README.md                   │ file │  6.9 kB │ 15 seconds ago │                                                                                                                                                                                                                                                 
+│ 5 │ springboot-core-arch-server │ dir  │  4.0 kB │ 2 minutes ago  │                                                                                                                                                                                                                                                 
+│ 6 │ 部署                        │ dir  │     0 B │ 2 minutes ago  │                                                                                                                                                                                                                                                 
+╰───┴─────────────────────────────┴──────┴─────────┴────────────────╯
+ springboot-core-arch  cd 部署                                                                                                                                                                                                                                                                                      
+ 部署  ls                                                                                                                                                                                                                                                                                                           
+╭───┬─────────────┬──────┬───────┬───────────────╮
+│ # │    name     │ type │ size  │   modified    │                                                                                                                                                                                                                                                                    
+├───┼─────────────┼──────┼───────┼───────────────┤
+│ 0 │ install.bat │ file │ 844 B │ 3 minutes ago │                                                                                                                                                                                                                                                                    
+│ 1 │ install.sh  │ file │ 830 B │ 3 minutes ago │                                                                                                                                                                                                                                                                    
+╰───┴─────────────┴──────┴───────┴───────────────╯
+~~~
 
 ## 许可证
 
