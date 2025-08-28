@@ -20,10 +20,27 @@
     <dependencies>
         <dependency>
             <groupId>org.example</groupId>
-            <artifactId>common-core</artifactId>
+            <artifactId>common-common</artifactId>
             <version>1.0-SNAPSHOT</version>
         </dependency>
 
+        <dependency>
+            <groupId>org.example</groupId>
+            <artifactId>common-response</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+
+        <!-- 添加Spring Web依赖以解决Servlet相关类缺失问题 -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+
+        <!-- Bean Validation -->
+        <dependency>
+            <groupId>jakarta.validation</groupId>
+            <artifactId>jakarta.validation-api</artifactId>
+        </dependency>
     </dependencies>
 
 </project>

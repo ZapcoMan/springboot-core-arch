@@ -39,6 +39,11 @@
         </dependency>
         <dependency>
             <groupId>org.example</groupId>
+            <artifactId>common-common</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>org.example</groupId>
             <artifactId>common-db</artifactId>
             <version>1.0-SNAPSHOT</version>
         </dependency>

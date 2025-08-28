@@ -20,6 +20,7 @@
         <module>common-db</module>
         <module>server-auth</module>
         <module>server-user</module>
+        <module>common-common</module>
     </modules>
 
     <properties>
