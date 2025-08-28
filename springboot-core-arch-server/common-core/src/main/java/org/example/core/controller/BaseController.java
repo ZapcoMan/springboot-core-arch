@@ -1,9 +1,9 @@
 package org.example.core.controller;
 
 
-import com.example.common.result.R;
-import com.example.core.service.BaseService;
 import io.swagger.v3.oas.annotations.Operation;
+import org.example.core.service.BaseService;
+import org.example.result.R;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
