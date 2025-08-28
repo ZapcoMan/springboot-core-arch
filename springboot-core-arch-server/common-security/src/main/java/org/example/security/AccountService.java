@@ -1,5 +1,6 @@
 package org.example.security;
 
+import org.apache.catalina.User;
 import org.example.common.enums.RoleEnum;
 import org.example.core.service.BaseService;
 import org.example.entity.Account;
@@ -37,6 +38,8 @@ public interface AccountService extends BaseService<Account, String> {
      * @return Account类型，表示登录成功的账户信息
      */
     Account login(Account account);
+
+    void register(User user);
 
 //    /**
 //     * 注册新用户默认实现抛出异常，因为不是所有角色都支持注册操作
