@@ -1,0 +1,55 @@
+name: Deploy Spring Boot Core Arch
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+
+    - name: Set up JDK 17
+      uses: actions/setup-java@v3
+      with:
+        java-version: '17'
+        distribution: 'temurin'
+        cache: maven
+
+    - name: Build with Maven
+      run: |
+        cd springboot-core-arch-server
+        mvn clean package -DskipTests
+
+    - name: Set up Docker Buildx
+      uses: docker/setup-buildx-action@v3
+
+    - name: Login to DockerHub
+      uses: docker/login-action@v3
+      with:
+        username: ${{ secrets.DOCKERHUB_USERNAME }}
+        password: ${{ secrets.DOCKERHUB_TOKEN }}
+
+    - name: Build and push server-auth
+      uses: docker/build-push-action@v4
+      with:
+        context: springboot-core-arch-server/server-auth
+        push: false
+        tags: server-auth:latest
+
+    - name: Build and push server-user
+      uses: docker/build-push-action@v4
+      with:
+        context: springboot-core-arch-server/server-user
+        push: false
+        tags: server-user:latest
+
+    - name: Deploy to server
+      run: |
+        echo "部署到服务器"
+        # 这里可以添加部署到远程服务器的命令
+        # 例如使用ssh部署到指定服务器
