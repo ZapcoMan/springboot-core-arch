@@ -4,98 +4,164 @@
 ## 项目结构
 ~~~
 springboot-core-arch/
-├── springboot-core-arch-server/
-│   ├── common-cache/
-│   │   ├── src/main/java/org/example/
-│   │   │   ├── config/
-│   │   │   │   ├── CorsConfig.java
-│   │   │   │   ├── JacksonConfig.java
-│   │   │   │   └── RedisConfig.java
-│   │   │   └── utils/
-│   │   │       ├── MixUtils.java
-│   │   │       └── RedisUtil.java
-│   │   └── pom.xml
-│   ├── common-core/
-│   │   ├── src/main/java/org/example/
-│   │   │   ├── common/
-│   │   │   │   ├── advice/
-│   │   │   │   ├── annotation/
-│   │   │   │   ├── dto/
-│   │   │   │   └── enums/
-│   │   │   └── core/
-│   │   │       ├── controller/
-│   │   │       ├── mapper/
-│   │   │       └── service/
-│   │   └── pom.xml
-│   ├── common-db/
-│   │   ├── src/main/java/org/example/
-│   │   │   └── config/
-│   │   │       └── MyBatisConfig.java
-│   │   └── pom.xml
-│   ├── common-dto/
-│   │   └── pom.xml
-│   ├── common-entity/
-│   │   ├── src/main/java/org/example/
-│   │   │   └── entity/
-│   │   │       ├── Account.java
-│   │   │       ├── Admin.java
-│   │   │       └── AuditLog.java
-│   │   └── pom.xml
-│   ├── common-exception/
-│   │   ├── src/main/java/org/example/
-│   │   │   └── exception/
-│   │   │       ├── CustomerException.java
-│   │   │       └── GlobalExceptionHandler.java
-│   │   └── pom.xml
-│   ├── common-log/
-│   │   ├── src/main/java/org/example/
-│   │   │   └── log/
-│   │   │       ├── aspect/
-│   │   │       ├── mapper/
-│   │   │       └── service/
-│   │   └── pom.xml
-│   ├── common-response/
-│   │   ├── src/main/java/org/example/
-│   │   │   └── result/
-│   │   │       ├── PageResult.java
-│   │   │       ├── R.java
-│   │   │       └── ResultCodeEnum.java
-│   │   └── pom.xml
-│   ├── common-security/
-│   │   ├── src/main/java/org/example/
-│   │   │   ├── config/
-│   │   │   │   ├── JwtProperties.java
-│   │   │   │   └── SecurityConfig.java
-│   │   │   ├── security/
-│   │   │   │   ├── AccountService.java
-│   │   │   │   ├── JwtAuthenticationFilter.java
-│   │   │   │   └── RoleStrategyContext.java
-│   │   │   ├── strategy/
-│   │   │   │   ├── Context/
-│   │   │   │   ├── RoleStrategy.java
-│   │   │   │   └── impl/
-│   │   │   └── utils/
-│   │   │       ├── JwtUtil.java
-│   │   │       └── TokenUtils.java
-│   │   └── pom.xml
-│   ├── server-auth/
-│   │   ├── src/main/java/org/example/serviceauth/
-│   │   │   └── ServiceAuthApplication.java
-│   │   ├── src/main/resources/
-│   │   │   └── application.yml
-│   │   └── pom.xml
-│   ├── server-user/
-│   │   ├── src/main/java/org/example/serviceuser/
-│   │   │   ├── ServiceUserApplication.java
-│   │   │   ├── mapper/
-│   │   │   └── service/
-│   │   ├── src/main/resources/
-│   │   │   └── application.yml
-│   │   └── pom.xml
-│   └── pom.xml
 ├── README.md
 ├── LICENSE
-└── .gitignore
+├── .gitignore
+└── springboot-core-arch-server/
+    ├── pom.xml
+    ├── docker-compose.yml
+    ├── common-cache/
+    │   ├── pom.xml
+    │   └── src/
+    │       └── main/
+    │           └── java/
+    │               └── org/
+    │                   └── example/
+    │                       ├── config/
+    │                       │   ├── CorsConfig.java
+    │                       │   ├── JacksonConfig.java
+    │                       │   └── RedisConfig.java
+    │                       └── utils/
+    │                           ├── MixUtils.java
+    │                           └── RedisUtil.java
+    ├── common-common/
+    │   ├── pom.xml
+    │   └── src/
+    │       └── main/
+    │           └── java/
+    │               └── org/
+    │                   └── example/
+    │                       └── common/
+    │                           ├── annotation/
+    │                           ├── dto/
+    │                           └── enums/
+    ├── common-core/
+    │   ├── pom.xml
+    │   └── src/
+    │       └── main/
+    │           └── java/
+    │               └── org/
+    │                   └── example/
+    │                       └── core/
+    │                           ├── controller/
+    │                           ├── mapper/
+    │                           └── service/
+    ├── common-db/
+    │   ├── pom.xml
+    │   └── src/
+    │       └── main/
+    │           └── java/
+    │               └── org/
+    │                   └── example/
+    ├── common-dto/
+    │   ├── pom.xml
+    │   └── src/
+    │       └── main/
+    │           └── java/
+    │               └── org/
+    │                   └── example/
+    │                       ├── ConfirmDto.java
+    │                       ├── LoginResult.java
+    │                       └── PageRequestDTO.java
+    ├── common-entity/
+    │   ├── pom.xml
+    │   └── src/
+    │       └── main/
+    │           └── java/
+    │               └── org/
+    │                   └── example/
+    │                       └── entity/
+    │                           ├── Account.java
+    │                           └── Admin.java
+    ├── common-exception/
+    │   ├── pom.xml
+    │   └── src/
+    │       └── main/
+    │           └── java/
+    │               └── org/
+    │                   └── example/
+    │                       └── exception/
+    │                           ├── CustomerException.java
+    │                           └── GlobalExceptionHandler.java
+    ├── common-log/
+    │   ├── pom.xml
+    │   └── src/
+    │       └── main/
+    │           └── java/
+    │               └── org/
+    │                   └── example/
+    │                       └── log/
+    │                           ├── aspect/
+    │                           ├── entity/
+    │                           ├── mapper/
+    │                           └── service/
+    ├── common-response/
+    │   ├── pom.xml
+    │   └── src/
+    │       └── main/
+    │           └── java/
+    │               └── org/
+    │                   └── example/
+    │                       ├── advice/
+    │                       └── result/
+    │                           ├── PageResult.java
+    │                           ├── R.java
+    │                           └── ResultCodeEnum.java
+    ├── common-security/
+    │   ├── pom.xml
+    │   └── src/
+    │       └── main/
+    │           └── java/
+    │               └── org/
+    │                   └── example/
+    │                       ├── config/
+    │                       │   ├── JwtProperties.java
+    │                       │   └── SecurityConfig.java
+    │                       ├── security/
+    │                       │   ├── AccountService.java
+    │                       │   ├── JwtAuthenticationFilter.java
+    │                       │   └── RoleStrategyContext.java
+    │                       ├── strategy/
+    │                       │   ├── Context/
+    │                       │   ├── RoleStrategy.java
+    │                       │   └── impl/
+    │                       └── utils/
+    │                           ├── JwtUtil.java
+    │                           └── TokenUtils.java
+    ├── server-auth/
+    │   ├── pom.xml
+    │   ├── Dockerfile
+    │   ├── application-docker.yml
+    │   └── src/
+    │       └── main/
+    │           ├── java/
+    │           │   └── org/
+    │           │       └── example/
+    │           │           └── serviceauth/
+    │           │               ├── ServiceAuthApplication.java
+    │           │               ├── account/
+    │           │               ├── controller/
+    │           │               ├── mapper/
+    │           │               ├── service/
+    │           │               └── strategy/
+    │           └── resources/
+    │               └── application.yml
+    └── server-user/
+        ├── pom.xml
+        ├── Dockerfile
+        ├── application-docker.yml
+        └── src/
+            └── main/
+                ├── java/
+                │   └── org/
+                │       └── example/
+                │           └── serviceuser/
+                │               ├── ServiceUserApplication.java
+                │               ├── mapper/
+                │               └── service/
+                └── resources/
+                    └── application.yml
+
 
 ~~~
 
