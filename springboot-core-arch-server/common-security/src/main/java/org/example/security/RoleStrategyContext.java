@@ -1,11 +1,12 @@
 package org.example.security;
 
+
 import com.auth0.jwt.interfaces.DecodedJWT;
-import com.example.common.exception.CustomerException;
-import com.example.common.utils.JwtUtil;
-import com.example.enums.RoleEnum;
-import com.example.modules.system.entity.Account;
-import com.example.strategy.RoleStrategy;
+import org.example.common.enums.RoleEnum;
+import org.example.entity.Account;
+import org.example.exception.CustomerException;
+import org.example.strategy.RoleStrategy;
+import org.example.utils.JwtUtil;
 import org.springframework.stereotype.Component;
 
 import java.util.HashMap;

@@ -1,15 +1,17 @@
 package org.example.serviceauth.controller;
 
-import com.example.common.annotation.AuditLogRecord;
-import com.example.common.result.R;
-import com.example.core.controller.BaseController;
-import com.example.core.service.BaseService;
-import com.example.enums.RoleEnum;
-import com.example.modules.system.entity.Account;
-import com.example.strategy.Context.RoleStrategyContext;
+
 import io.swagger.v3.oas.annotations.Operation;
 import jakarta.annotation.Resource;
 import lombok.extern.slf4j.Slf4j;
+import org.example.common.annotation.AuditLogRecord;
+import org.example.common.enums.RoleEnum;
+import org.example.core.controller.BaseController;
+
+import org.example.core.service.BaseService;
+import org.example.entity.Account;
+import org.example.result.R;
+import org.example.security.RoleStrategyContext;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.web.bind.annotation.*;
 
