@@ -1,6 +1,8 @@
 package org.example.core.service.impl;
 
-import com.example.core.service.BaseService;
+
+
+import org.example.core.service.BaseService;
 
 import java.util.List;
 
