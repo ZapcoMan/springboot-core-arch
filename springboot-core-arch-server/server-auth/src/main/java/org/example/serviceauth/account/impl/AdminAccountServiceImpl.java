@@ -2,6 +2,8 @@ package org.example.serviceauth.account.impl;
 
 
 import jakarta.annotation.Resource;
+
+import org.apache.catalina.User;
 import org.example.common.enums.RoleEnum;
 import org.example.core.service.impl.BaseServiceImpl;
 import org.example.entity.Account;
@@ -20,8 +22,6 @@ import java.util.List;
 public class AdminAccountServiceImpl extends BaseServiceImpl<Account, String, AdminMapper> implements AccountService {
 
 
-    @Resource
-    private AdminMapper adminMapper;
 
     @Resource
     private AdminService adminService;
@@ -130,7 +130,6 @@ public class AdminAccountServiceImpl extends BaseServiceImpl<Account, String, Ad
      */
     @Override
     public void register(User user) {
-        AccountService.super.register(user);
     }
 
     /**
