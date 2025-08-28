@@ -1,15 +1,16 @@
 package org.example.exception;
 
 
-
 import lombok.extern.slf4j.Slf4j;
 import org.example.result.R;
 import org.example.result.ResultCodeEnum;
+
 import org.springframework.http.converter.HttpMessageNotReadableException;
-import org.springframework.validation.BindException;
 import org.springframework.web.bind.MissingServletRequestParameterException;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
+
+import java.net.BindException;
 
 @Slf4j
 @RestControllerAdvice(basePackages = "com.example.controller")

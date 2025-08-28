@@ -1,4 +1,4 @@
-package org.example.common.advice;
+package org.example.advice;
 
 
 import com.fasterxml.jackson.core.JsonProcessingException;
