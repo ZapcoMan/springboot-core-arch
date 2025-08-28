@@ -1,9 +1,11 @@
 package org.example.exception;
 
-import com.example.common.result.ResultCodeEnum;
+
 import lombok.Data;
 import lombok.EqualsAndHashCode;
+
 import lombok.extern.slf4j.Slf4j;
+import org.example.result.ResultCodeEnum;
 
 
 /**
