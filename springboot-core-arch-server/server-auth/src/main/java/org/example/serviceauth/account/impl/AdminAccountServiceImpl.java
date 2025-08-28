@@ -1,13 +1,13 @@
-package org.example.serviceuser.service.account.impl;
+package org.example.serviceauth.account.impl;
 
-import com.example.core.service.impl.BaseServiceImpl;
-import com.example.enums.RoleEnum;
-import com.example.modules.system.entity.Account;
-import com.example.modules.system.entity.User;
-import com.example.modules.system.mapper.AdminMapper;
-import com.example.modules.system.service.AccountService;
-import com.example.modules.system.service.AdminService;
+
 import jakarta.annotation.Resource;
+import org.example.common.enums.RoleEnum;
+import org.example.core.service.impl.BaseServiceImpl;
+import org.example.entity.Account;
+import org.example.security.AccountService;
+import org.example.serviceauth.mapper.AdminMapper;
+import org.example.serviceauth.service.AdminService;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
