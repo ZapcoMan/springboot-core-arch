@@ -190,7 +190,7 @@ springboot-core-arch/
 │ 1 │ install.sh  │ file │ 830 B │ 3 minutes ago │                                                                                                                                                                                                                                                                    
 ╰───┴─────────────┴──────┴───────┴───────────────╯
 ~~~
-
+* 引入 Spring Security，JWT 安全框架 并设置了权限管理 并且做了 防止 SQL注入等安全设置
 ## 许可证
 
 本项目仅供学习和参考使用。
